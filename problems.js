@@ -42,11 +42,10 @@ function nthPower(arr, n) {
   const len = arr.length;
   let i = 0;
   let res = [];
-  let power = 0;
-  while (true) {
-    power = Number(Math.pow(n, i++));
-    if (power >= len) break;
+  let power = Number(Math.pow(n, i++));
+  while (power < len) {
     res.push(arr[power]);
+    power = Number(Math.pow(n, i++));
   }
   return res;
 }
