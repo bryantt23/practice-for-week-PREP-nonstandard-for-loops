@@ -27,11 +27,10 @@ function secondPower(arr) {
   const len = arr.length;
   let i = 0;
   let res = [];
-  let power = 0;
-  while (true) {
-    power = Number(Math.pow(2, i++));
-    if (power >= len) break;
+  let power = Number(Math.pow(2, i++));
+  while (power < len) {
     res.push(arr[power]);
+    power = Number(Math.pow(2, i++));
   }
   return res;
 }
